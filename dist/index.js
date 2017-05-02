@@ -1,4 +1,5 @@
 const { createElement } = React
+const { render } = ReactDOM
 
 const title = createElement(
   'h1',
@@ -6,7 +7,7 @@ const title = createElement(
   'Hello World'
 )
 
-ReactDOM.render(
+render(
   title,
   document.getElementById('react-container')
 )

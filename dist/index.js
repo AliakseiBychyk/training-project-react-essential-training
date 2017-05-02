@@ -1,4 +1,5 @@
 const { createElement } = React
+const { render } = ReactDOM
 
 const title = createElement(
   'h1',

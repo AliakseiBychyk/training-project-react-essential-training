@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "httpster -d ./dist -p 3030",
-    "static": "babel ./src/index.js --out-file ./dist/bundle.js"
+    "static": "babel ./src/index.js --out-file ./dist/bundle.js",
+    "dev": "./node_modules/.bin/webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-loader": "^7.0.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

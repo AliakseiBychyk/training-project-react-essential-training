@@ -4,7 +4,7 @@ render(
   <h1 id="title"
       className="header"
       style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
-  Hello world
+  HEY WORLD!
   </h1>,
   document.getElementById('react-container')
 )

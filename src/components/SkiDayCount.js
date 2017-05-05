@@ -6,7 +6,10 @@ import Calendar from 'react-icons/lib/fa/calendar'
 const percentToDecimal = (decimal) => ((decimal*100) + '%')
 const calcGoalProgress = (total, goal) => percentToDecimal(total/goal)
 
-export const SkiDayCount = ({total, powder, backcountry, goal})  =>  (
+export const SkiDayCount = ({ total = 50,
+                              powder = 20,
+                              backcountry = 15,
+                              goal = 125 }) => (
   <div className="ski-day-count">
     <div className="total-days">
       <span>{total}</span>
@@ -33,10 +36,3 @@ export const SkiDayCount = ({total, powder, backcountry, goal})  =>  (
     </div>  
   </div>
 )
-
-SkiDayCount.defaultProps = {
-  total: 50,
-  powder: 10,
-  backcountry: 15,
-  goal: 80
-}

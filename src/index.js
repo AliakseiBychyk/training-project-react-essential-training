@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { CityVisitCount } from './components/CityVisitCount'
+import { SkiDayCount } from './components/SkiDayCount'
 
 window.React = React
 
 render(
-  <CityVisitCount />,
+  <SkiDayCount />,
   document.getElementById('react-container')
 )

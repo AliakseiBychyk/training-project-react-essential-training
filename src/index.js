@@ -1,14 +1,14 @@
 import React from 'react'
 import { render } from 'react-dom'
 // import { SkiDayList } from './components/SkiDayList'
-// import { SkiDayCount } from './components/SkiDayCount'
+import { SkiDayCount } from './components/SkiDayCount'
 // import { SkiDayCount } from './components/SkiDayCount-createClass'
-import { SkiDayCount } from './components/SkiDayCount-ES6'
+// import { SkiDayCount } from './components/SkiDayCount-ES6'
 
 window.React = React
 
 render(
-  <SkiDayCount backcountry="wild"/>,
+  <SkiDayCount backcountry={28} />,
   document.getElementById('react-container')
 )
 

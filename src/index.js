@@ -1,17 +1,18 @@
 import React from 'react'
 import { render } from 'react-dom'
+import './stylesheets/SkiDayList.scss'
+import './stylesheets/SkiDayCount.scss'
+import './stylesheets/Menu.scss'
 import { App } from './components/App.js'
-// import { SkiDayList } from './components/SkiDayList'
-// import { SkiDayCount } from './components/SkiDayCount'
+import { Whoops404 } from './components/Whoops404.js'
+import { Router, Route, hashHistory } from 'react-router'
 
 window.React = React
 
-// render(
-//   <SkiDayCount backcountry={28} />,
-//   document.getElementById('react-container')
-// )
-
 render(
-  <App />,
+  <Router history={hashHistory}>
+    <Route path='/' component={App} />
+    <Route path='*' component={Whoops404} />
+  </Router>,
   document.getElementById('react-container')
 )

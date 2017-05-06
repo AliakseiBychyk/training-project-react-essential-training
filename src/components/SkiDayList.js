@@ -3,6 +3,8 @@ import SnowFlake from 'react-icons/lib/ti/weather-snow'
 import Calendar from 'react-icons/lib/fa/calendar'
 import { SkiDayRow } from './SkiDayRow'
 import { PropTypes } from 'react'
+import '../stylesheets/SkiDayList.scss'
+import '../stylesheets/SkiDayCount.scss'
  
 export const SkiDayList = ({ days }) => (
   <table>

@@ -1,36 +1,39 @@
-import { createClass } from 'react'
+import { Component } from 'react'
 import { SkiDayList } from './SkiDayList.js'
 import { SkiDayCount } from './SkiDayCount.js'
 
-export const App = createClass({
-  getInitialState() {
-    return {
+export class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
       allSkiDays: [
-    {
-      resort: "Squaw Valley",
-      date: new Date("1/2/2017"),
-      powder: true,
-      backcountry: false
-    },
-    {
-      resort: "Kirkwood",
-      date: new Date("3/21/2017"),
-      powder: false,
-      backcountry: false
-    },
-    {
-      resort: "Mt. Tallac",
-      date: new Date("4/8/2017"),
-      powder: false,
-      backcountry: true
-    },
-  ]
+        {
+          resort: "Squaw Valley",
+          date: new Date("1/2/2017"),
+          powder: true,
+          backcountry: false
+        },
+        {
+          resort: "Kirkwood",
+          date: new Date("3/21/2017"),
+          powder: false,
+          backcountry: false
+        },
+        {
+          resort: "Mt. Tallac",
+          date: new Date("4/8/2017"),
+          powder: false,
+          backcountry: true
+        },
+      ]
     }
-  },
+  }
+
   countDays(filter) {
     const {allSkiDays} = this.state
     return allSkiDays.filter(day => filter ? day[filter] : day).length
-  },
+  }
+
   render() {
     return (
       <div className="app">
@@ -41,4 +44,4 @@ export const App = createClass({
       </div>  
     )
   }
-})
+}
